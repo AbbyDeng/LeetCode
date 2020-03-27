@@ -8,7 +8,9 @@ public class InorderMorris {
         TreeNode(int x) { val = x; }
     }
 
-    public static List<Integer> preorderMorris(Test.TreeNode root) {
+    // this is different from regular Inorder Morris algorithm
+    // inspired by Preorder Morris
+    public static List<Integer> inorderMorris(Test.TreeNode root) {
         List<Integer> traversal = new ArrayList<>();
 
         Test.TreeNode node = root;
@@ -51,6 +53,6 @@ public class InorderMorris {
         root.right.left = new Test.TreeNode(6);
         root.right.right = new Test.TreeNode(7);
 
-        List<Integer> list = preorderMorris(root);
+        List<Integer> list = inorderMorris(root);
     }
 }
